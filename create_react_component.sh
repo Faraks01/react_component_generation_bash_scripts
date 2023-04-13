@@ -1,6 +1,6 @@
 #! /bin/bash
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPT_DIR=$(dirname "$0")
 
 echo "Enter a component name"
 read COMPONENT_NAME
