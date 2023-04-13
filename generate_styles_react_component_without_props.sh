@@ -4,7 +4,7 @@
 mkdir ${COMPONENT_NAME}
 
 # Creating an index file
-echo "export { default } from "./${COMPONENT_NAME}";" > ${COMPONENT_NAME}/index.ts
+echo "export { default } from \"./${COMPONENT_NAME}\";" > ${COMPONENT_NAME}/index.ts
 
 # Creating a component file
 echo "import React, {FC} from \"react\";
