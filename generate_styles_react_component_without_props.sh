@@ -13,4 +13,4 @@ const ${COMPONENT_NAME}: FC = () => {
     return null
 }
 
-export default ${COMPONENT_NAME}" > ${COMPONENT_NAME}/${COMPONENT_NAME}.tsx
+export default \"${COMPONENT_NAME}\"" > ${COMPONENT_NAME}/${COMPONENT_NAME}.tsx

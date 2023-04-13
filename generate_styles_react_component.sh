@@ -18,7 +18,7 @@ const ${COMPONENT_NAME}: FC<${COMPONENT_NAME}Props> = (props) => {
     return null
 }
 
-export default ${COMPONENT_NAME}" > ${COMPONENT_NAME}/${COMPONENT_NAME}.tsx
+export default \"${COMPONENT_NAME}\"" > ${COMPONENT_NAME}/${COMPONENT_NAME}.tsx
 
 # Creating a types file
 echo "export interface ${COMPONENT_NAME}Props {
