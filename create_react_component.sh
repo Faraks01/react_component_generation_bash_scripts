@@ -17,21 +17,58 @@ useTemplate ()
     $1
 }
 
+COMPONENT_TYPE=""
+
+echo "Select component type"
+select type in JS TS
+do
+    case $type in
+    JS)
+    COMPONENT_TYPE="JS"
+    break;;
+    TS)
+    COMPONENT_TYPE="TS"
+    break;;
+    *)
+    echo "Select valid option, please!";;
+    esac
+done
+
 echo "Which component you want to create?"
 select variant in Component Component\ without\ props Styless\ Component Styless\ Component\ without\ props
 do
     case $variant in
     Component)
-    useTemplate $SCRIPT_DIR/generate_react_component.sh
+      if [ "$COMPONENT_TYPE" = "TS" ];
+      then
+        useTemplate $SCRIPT_DIR/generate_ts_react_component.sh
+      else
+        useTemplate $SCRIPT_DIR/generate_react_component.sh
+      fi
     break;;
     Component\ without\ props)
-    useTemplate $SCRIPT_DIR/generate_react_component_without_props.sh
+      if [ "$COMPONENT_TYPE" = "TS" ];
+      then
+        useTemplate $SCRIPT_DIR/generate_ts_react_component_without_props.sh
+      else
+        useTemplate $SCRIPT_DIR/generate_react_component_without_props.sh
+      fi
     break;;
     Styless\ Component)
-    useTemplate $SCRIPT_DIR/generate_styles_react_component.sh
+      if [ "$COMPONENT_TYPE" = "TS" ];
+      then
+        useTemplate $SCRIPT_DIR/generate_styles_ts_react_component.sh
+      else
+        useTemplate $SCRIPT_DIR/generate_styles_react_component.sh
+      fi
     break;;
     Styless\ Component\ without\ props)
-    useTemplate $SCRIPT_DIR/generate_styles_react_component_without_props.sh
+      if [ "$COMPONENT_TYPE" = "TS" ];
+      then
+        useTemplate $SCRIPT_DIR/generate_styles_ts_react_component_without_props.sh
+      else
+        useTemplate $SCRIPT_DIR/generate_styles_react_component_without_props.sh
+      fi
     break;;
     *)
     echo "Select valid option, please!";;

@@ -4,13 +4,12 @@
 mkdir ${COMPONENT_NAME}
 
 # Creating an index file
-echo "export { default } from \"./${COMPONENT_NAME}\";" > ${COMPONENT_NAME}/index.ts
+echo "export { default } from \"./${COMPONENT_NAME}\";" > ${COMPONENT_NAME}/index.js
 
 # Creating a component file
-echo "import React, {FC} from \"react\";
-import {${COMPONENT_NAME}Props} from \"./${COMPONENT_NAME}.types\";
+echo "import React from \"react\";
 
-const ${COMPONENT_NAME}: FC<${COMPONENT_NAME}Props> = (props) => {
+const ${COMPONENT_NAME} = (props) => {
     const {
 
     } = props;
@@ -18,9 +17,4 @@ const ${COMPONENT_NAME}: FC<${COMPONENT_NAME}Props> = (props) => {
     return null
 }
 
-export default ${COMPONENT_NAME}" > ${COMPONENT_NAME}/${COMPONENT_NAME}.tsx
-
-# Creating a types file
-echo "export interface ${COMPONENT_NAME}Props {
-
-}" > ${COMPONENT_NAME}/${COMPONENT_NAME}.types.tsx
+export default ${COMPONENT_NAME}" > ${COMPONENT_NAME}/${COMPONENT_NAME}.js
