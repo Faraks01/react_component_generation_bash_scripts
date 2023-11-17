@@ -4,16 +4,16 @@
 mkdir ${COMPONENT_NAME}
 
 # Creating an index file
-echo -e "export { default } from \"./${COMPONENT_NAME}\";" > ${COMPONENT_NAME}/index.js
+echo -e "export { default } from './${COMPONENT_NAME}'" > ${COMPONENT_NAME}/index.js
 
 # Creating a component file
-echo -e "import React from \"react\";
-import c from \"./${COMPONENT_NAME}.module.scss\";
+echo -e "import React from 'react'
+import c from './${COMPONENT_NAME}.module.scss'
 
 const ${COMPONENT_NAME} = (props) => {
     const {
 
-    } = props;
+    } = props
 
     return null
 }

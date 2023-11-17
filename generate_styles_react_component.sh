@@ -4,15 +4,15 @@
 mkdir ${COMPONENT_NAME}
 
 # Creating an index file
-echo "export { default } from \"./${COMPONENT_NAME}\";" > ${COMPONENT_NAME}/index.js
+echo "export { default } from './${COMPONENT_NAME}'" > ${COMPONENT_NAME}/index.js
 
 # Creating a component file
-echo "import React from \"react\";
+echo "import React from 'react'
 
 const ${COMPONENT_NAME} = (props) => {
     const {
 
-    } = props;
+    } = props
 
     return null
 }
