@@ -7,9 +7,7 @@ mkdir ${COMPONENT_NAME}
 echo "export { default } from './${COMPONENT_NAME}'" > ${COMPONENT_NAME}/index.js
 
 # Creating a component file
-echo "import React from 'react'
-
-const ${COMPONENT_NAME} = () => {
+echo "const ${COMPONENT_NAME} = () => {
     return null
 }
 

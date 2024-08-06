@@ -75,4 +75,10 @@ do
     esac
 done
 
+echo "Fixing generated component with eslint fix"
+npx eslint --fix $COMPONENT_NAME
+
+echo "Adding component to git"
+git add $COMPONENT_NAME
+
 echo "Component created!"

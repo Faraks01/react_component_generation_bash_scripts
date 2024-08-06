@@ -7,7 +7,7 @@ mkdir ${COMPONENT_NAME}
 echo "export { default } from './${COMPONENT_NAME}'" > ${COMPONENT_NAME}/index.ts
 
 # Creating a component file
-echo "import React, {FC} from 'react'
+echo "import {FC} from 'react'
 import c from './${COMPONENT_NAME}.module.scss'
 
 const ${COMPONENT_NAME}: FC = () => {
