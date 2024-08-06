@@ -10,11 +10,7 @@ echo -e "export { default } from './${COMPONENT_NAME}'" > ${COMPONENT_NAME}/inde
 echo -e "import React from 'react'
 import c from './${COMPONENT_NAME}.module.scss'
 
-const ${COMPONENT_NAME} = (props) => {
-    const {
-
-    } = props
-
+const ${COMPONENT_NAME} = ({}) => {
     return null
 }
 

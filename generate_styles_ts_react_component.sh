@@ -10,11 +10,7 @@ echo "export { default } from './${COMPONENT_NAME}'" > ${COMPONENT_NAME}/index.t
 echo "import React, {FC} from 'react'
 import {${COMPONENT_NAME}Props} from './${COMPONENT_NAME}.types'
 
-const ${COMPONENT_NAME}: FC<${COMPONENT_NAME}Props> = (props) => {
-    const {
-
-    } = props
-
+const ${COMPONENT_NAME}: FC<${COMPONENT_NAME}Props> = ({}) => {
     return null
 }
 

@@ -11,11 +11,7 @@ echo -e "import React, {FC} from 'react'
 import c from './${COMPONENT_NAME}.module.scss'
 import {${COMPONENT_NAME}Props} from './${COMPONENT_NAME}.types'
 
-const ${COMPONENT_NAME}: FC<${COMPONENT_NAME}Props> = (props) => {
-    const {
-
-    } = props
-
+const ${COMPONENT_NAME}: FC<${COMPONENT_NAME}Props> = ({}) => {
     return null
 }
 
